@@ -12,7 +12,7 @@ const Nav = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/secured">Secured Page</a>
+            <a href="/protected">Protected page</a>
           </li>
         </ul>
         <div>
