@@ -1,4 +1,6 @@
-const Protected = () => {
+import { FC } from "react";
+
+const Protected: FC = () => {
   return (
     <div>
       <h1>Welcome to the Protected page.</h1>

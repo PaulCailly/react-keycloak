@@ -1,25 +1,17 @@
-import { useKeycloak } from "@react-keycloak/web";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { FC } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Protected from "./pages/Protected";
 import ProtectedRoute from "./helpers/ProtectedRoute";
 
-function App() {
-  const { initialized } = useKeycloak();
-
-  if (!initialized) {
-    return <h3>Loading...</h3>;
-  }
-
+const App: FC = () => {
   return (
     <div>
       <Nav />
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
           <Route
             path="/protected"
             element={
@@ -28,10 +20,11 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/" element={<Home />}></Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

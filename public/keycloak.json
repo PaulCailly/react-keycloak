@@ -1,0 +1,8 @@
+{
+  "realm": "react-app",
+  "auth-server-url": "http://localhost:8080/auth/",
+  "ssl-required": "external",
+  "resource": "react-app-1",
+  "public-client": true,
+  "confidential-port": 0
+}

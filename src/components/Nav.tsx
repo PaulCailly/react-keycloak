@@ -1,8 +1,7 @@
-import { useKeycloak } from "@react-keycloak/web";
+import AuthService from "../service/AuthService";
+import { FC } from "react";
 
-const Nav = () => {
-  const { keycloak } = useKeycloak();
-
+const Nav: FC = () => {
   return (
     <nav>
       <div>
@@ -16,15 +15,15 @@ const Nav = () => {
           </li>
         </ul>
         <div>
-          {!keycloak.authenticated && (
-            <button type="button" onClick={() => keycloak.login()}>
+          {!AuthService.isLoggedIn() && (
+            <button type="button" onClick={() => AuthService.login()}>
               Login
             </button>
           )}
 
-          {!!keycloak.authenticated && (
-            <button type="button" onClick={() => keycloak.logout()}>
-              Logout ({keycloak.tokenParsed.preferred_username})
+          {!!AuthService.isLoggedIn() && (
+            <button type="button" onClick={() => AuthService.logout()}>
+              Logout ({AuthService.getUsername()})
             </button>
           )}
         </div>
