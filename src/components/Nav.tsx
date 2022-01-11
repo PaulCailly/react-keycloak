@@ -1,4 +1,4 @@
-import AuthService from "../service/AuthService";
+import AuthService from "../services/AuthService";
 import { FC } from "react";
 
 const Nav: FC = () => {
@@ -12,6 +12,9 @@ const Nav: FC = () => {
           </li>
           <li>
             <a href="/protected">Protected page</a>
+          </li>
+          <li>
+            <a href="/admin">Admin page</a>
           </li>
         </ul>
         <div>

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
-import AuthService from "./service/AuthService";
+import AuthService from "./services/AuthService";
 
 const renderApp = () =>
   ReactDOM.render(
