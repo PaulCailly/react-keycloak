@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import AuthService from "./services/AuthService";
+import HttpService from "./services/HttpService";
 
 const renderApp = () =>
   ReactDOM.render(
@@ -13,3 +14,4 @@ const renderApp = () =>
   );
 
 AuthService.initKeycloak(renderApp);
+HttpService.configure();
