@@ -12,7 +12,7 @@ const initKeycloak = (onAuthenticatedCallback: () => void) => {
     })
     .then((authenticated) => {
       if (!authenticated) {
-        console.log("user is not authenticated..!");
+        console.log("User is not authenticated");
       }
       console.log(getToken());
       onAuthenticatedCallback();
